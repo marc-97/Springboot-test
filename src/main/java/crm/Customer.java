@@ -24,10 +24,8 @@ public class Customer {
   @Column(name = "email")
   private String email;
 
-  public Customer(String firstName, String lastName, String email) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.email = email;
+  public Customer() {
+
   }
 
   public Integer getId() {
@@ -50,12 +48,16 @@ public class Customer {
     return lastName;
   }
 
+  public void setLastName(String lastName) {
+    this.lastName = lastName;
+  }
+
   public String getEmail() {
     return email;
   }
 
-  public void setEmail(String value) {
-    email = value;
+  public void setEmail(String email) {
+    this.email = email;
   }
 
   @Override
