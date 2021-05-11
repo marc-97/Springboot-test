@@ -1,9 +1,5 @@
 package crm.customer;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
-import static crm.util.Util.requireAllNonNull;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,6 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
+import org.springframework.beans.factory.annotation.Autowired;
 
 @Entity
 @Table(name = "customer")
@@ -28,7 +25,6 @@ public class Customer {
   private String email;
 
   public Customer(String firstName, String lastName, String email) {
-    requireAllNonNull(firstName, lastName, email);
     this.firstName = firstName;
     this.lastName = lastName;
     this.email = email;
